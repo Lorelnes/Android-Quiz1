@@ -1,28 +1,79 @@
+
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rootLayout"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    android:padding="16dp">
 
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Product"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_marginBottom="24dp" />
-
-    <ImageView
-        android:id="@+id/productImageView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/oil1" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Product Title -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/oil1"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$12.99"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FF5722"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Offer -->
+        <TextView
+            android:id="@+id/offerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offer: Buy 2 Get 1 Free"
+            android:textSize="16sp"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add to Cart Button -->
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Additional Info (optional) -->
+        <TextView
+            android:id="@+id/productDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="High quality oil for your cooking needs."
+            android:textSize="14sp"
+            android:textColor="#666666" />
+
+    </LinearLayout>
+</ScrollView>
+
